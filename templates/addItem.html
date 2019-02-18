@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block body %}
+
+
+<div class= 'bg-light p-5'>
+
+	<section class = "d-flex p-2 bd-highlight justify-content-start m-4 border bg-white">
+		<div>
+
+			<h1 class='text-danger'>Create New Item for {{category.name}}</h1>
+
+			<form action="{{ url_for('addItem', category_name = category.name)}}" method = 'post'>
+			<p>Name:</p>
+			<input type='text' size='30' name='name' placeholder=''>
+			<p>Description:</p>
+			<input type='text' size='30' name='description' placeholder=''>
+			<input type='submit' value'Create New Item'>
+
+			<a href='{{url_for('showCategory', category_name = category.name) }}'>Cancel</a>
+		</div>
+
+	</section>
+</div>
+
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+{% block body %}
+
+
+<div class= 'bg-light p-5'>
+
+	<section class = "d-flex p-2 bd-highlight justify-content-start m-4 border bg-white">
+
+		<div class = 'p-2 mr-5 border-right'>
+			<h2 class = 'text-danger'>Categories</h2>
+			{% for category in categories %}
+				<a href='{{url_for('showCategory', category_name = category.name) }}'>{{category.name}}</a>
+				<br>
+			{% endfor %}
+		</div>
+
+		<div class = 'p-2'>
+	
+			<h2 class='text-danger'>{{category.name}} Items</h1>
+
+			<div>
+				{% for item in items %}
+					<a href='{{url_for('showItem', category_name = category.name, item_name = item.name)}}'>{{item.name}}</a>
+					<span> ({{item.description}}) </span>
+					<br>
+				{% endfor %}
+
+			<br>
+			<a class='text-secondary' href='{{url_for('addItem', category_name = category.name) }}'>Create New Item</a>
+
+			</div>
+			<a class='text-secondary' href='{{url_for('showCatalog') }}'>Return to the Catalog</a>
+		</div>
+
+	</section>
+
+</div>
+
+{% endblock %}

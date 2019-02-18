@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block body %}
+
+
+<div class= 'bg-light p-5'>
+
+	<section class = "d-flex p-2 bd-highlight justify-content-start m-4 border bg-white">
+		<div>	
+			<h1 class='text-danger'>{{item.name}}</h1>
+			<p>Category: {{item.category.name}}</p>
+			<p>Description:  {{item.description}}</p>
+			
+
+			<a href='{{url_for('editItem', category_name = category.name, item_name = item.name) }}'>Edit</a>
+			<a href='{{url_for('deleteItem', category_name = category.name, item_name = item.name) }}'>Delete</a>
+			<br>
+
+
+			<a href='{{url_for('showCategory', category_name = category.name) }}'>Return to {{category.name}}</a>
+
+		</div>
+	</section>
+
+</div>
+
+
+{% endblock %}

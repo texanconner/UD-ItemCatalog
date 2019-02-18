@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block body %}
+	
+<div class= 'bg-light p-5'>
+
+	<section class = "d-flex p-2 bd-highlight justify-content-start m-4 border bg-white">
+	
+		<div>
+
+	<h1 class='text-danger'>Edit Item: {{item.name}}</h1>
+
+	<form action='#' method = 'post'>
+		<p>Name:</p>
+		<input type='text' size='30' name='name' placeholder='{{item.name}}'>
+		<p>Description:</p>
+		<input type='text' size='30' name='description' placeholder='{{item.description}}'>
+		<input type='submit' value'Edit'>
+
+	<a href='{{url_for('showItem', category_name = category.name, item_name = item.name) }}'>Cancel</a>
+		</div>
+	</section>
+
+</div>
+{% endblock %}
