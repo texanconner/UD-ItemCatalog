@@ -44,3 +44,8 @@ The application should be up and working there.
 To retrieve JSON data you will need to know your category and item request. The format to request the URL is: http://localhost:5000/json/<category_name>/items/<item_name>
 
 Example: http://localhost:5000/json/Basketball/items/Hoop
+
+# HTML and CSS
+Flask Templates were used for the HTML and can be found in the catalog/templates folder
+
+I initially made my own CSS(in the static folder), but them added bootstrap CDN to handle the CSS and layout. The current CSS folder is blank, but I may customize more at a late point.
