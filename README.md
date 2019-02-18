@@ -20,11 +20,12 @@ These files can be put there into that catalog folder in the Full Stack VM Repo.
 A client_secrets.JSON file will also be needed, which can be retrieved from the Google Oauth page. This will be placed in the catalog folder.
 
 Python 3.7.1 was used to test this app
-  SQL Alchemy is used for the database management.
-  pip install SQLAlchemy
 
-  Flask is used for the web management.
-  pip install Flask
+SQL Alchemy is used for the database management.
+`pip install SQLAlchemy`
+
+Flask is used for the web management.
+`pip install Flask`
 
 # Database Setup
 In the vagrant session, inside the catalog folder, run the catalog_db_setup.py file.
