@@ -17,7 +17,8 @@ http://github.com/udacity/fullstack-nanodegree-vm&sa=D&ust=1547093291759000
 
 These files can be put there into that catalog folder in the Full Stack VM Repo.
 
-A client_secrets.JSON file will also be needed, which can be retrieved from the Google Oauth page. This will be placed in the catalog folder.
+A client_secrets.JSON file will also be needed, which can be retrieved from the Google Oauth page. This can be obtained at the site: https://console.developers.google.com/.  Select Credentials, and request for a new web application. The URL's you wish to use it for will need to be authorized.  The client_secrets.JSON file will be placed in the catalog folder. Your Client ID will also need to be updated in the login.html file, replacing the data-clientid field with the Client ID.
+
 
 Python 3.7.1 was used to test this app
 
